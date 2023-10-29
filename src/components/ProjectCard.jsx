@@ -5,20 +5,24 @@ function ProjectCard(props) {
         props.project
 
     return (
-        <section className='project-card'>
+        <article className='project-card'>
             <img src={image} alt={title} />
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <h4>Tech Stack & Focus</h4>
-            <p>{technologies.join(", ")}</p>
-            <div className='links-container'>
+            <div className='title-description-container'>
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
+            <section className='tech-stack'>
+                <h4>Tech Stack & Focus</h4>
+                <p>{technologies.join(", ")}</p>
+            </section>
+            <div className='project-links'>
                 <a
                     href={githubLink}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='btn'
                 >
-                    Github
+                    GitHub
                 </a>
                 <a
                     href={liveLink}
@@ -29,7 +33,7 @@ function ProjectCard(props) {
                     Live
                 </a>
             </div>
-        </section>
+        </article>
     )
 }
 
